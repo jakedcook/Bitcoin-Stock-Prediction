@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="body-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <title>stockPage</title>
+</head>
+<body>
+    <div class="parallax">
+        <nav class="navbar navbar-inverse visible-xs">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">Bitcoin</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Dashboard</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          
+          <div class="container-fluid">
+            <img src = "https://news.syr.edu/wp-content/uploads/2017/12/bitcoin400x300.jpg">
+            <div class="row content">
+              <div class="col-sm-3 sidenav hidden-xs">
+                <h2>Bitcoin</h2>
+               
+                <li>Yesterday's closing Bitcoin Price was $19,426.73 </li>
+                <li>The 52 Week Range as of today is $4,106.98 - $19,845.97</li>
+                <li>All prices are in USD $</li>
+               </div>
+              <br>
+              
+              <div class="col-sm-9">
+                <div class="well">
+                  <h4>Let's see if we can get a model to predict if Bitcoin is going to go to the MOON!</h4>
+                </div>
+                <h5 class="active"><a href="http://localhost:8888/view/00_Portfolio/Bitcoin-Stock-Prediction/templates/table.html">Prediction Table Comparission</a></h5>
+                <h6><a href="http://localhost:8888/view/00_Portfolio/Bitcoin-Stock-Prediction/templates/table2.html">Start to Current Graph with Predictions</a></h6>
+</div>
+</div>
+</body>
+<style>
+body, html{ 
+    height: 100%;
+    color: antiquewhite;
+}
+.parallax {
+    background-image: url("https://inteng-storage.s3.amazonaws.com/img/iea/PrO30yjyGq/sizes/moonfacts-ie-lunarsurface3jpg_md.jpg"); 
+    
+    height: 100%;
+   
+   min-height: 100vh;
+   
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+} 
+ .row.content {height: 700px;}
+
+ .sidenav {
+     background-color: #0c060628;
+      height: 100%;
+  }
+
+ @media screen and (max-width: 767px) {
+ .row.content {height: auto;} 
+  }
+h2{
+  color:antiquewhite;
+}
+h4{
+  color:antiquewhite;
+}
+p{
+  color:antiquewhite;
+}
+.well{
+  background-color: #0c060628;
+}
+
+</style>
