@@ -10,10 +10,10 @@ This project uses historical Bitcoin price data to predict future closing prices
 
 ## 📁 Data & Resources
 
-Multiple CSV files were used containing:
+Multiple CSV files were used, containing:
 - 1-month, 6-month, and full historical data from Yahoo Finance  
 - The best prediction accuracy was achieved using the full dataset  
-- A custom Yahoo Finance scraper was built but later replaced with CSV downloads
+- A custom Yahoo Finance scraper was built,t but later replaced with CSV downloads
 
 ## ⚙️ Model Selection & Testing
 
@@ -65,7 +65,3 @@ Screenshots of the deployed app (hosted locally or via web server):
 - Matplotlib
 - Flask
 - Jupyter Notebook
-
-## 📄 License
-
-This project is open-source under the MIT License.
