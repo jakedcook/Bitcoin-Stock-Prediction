@@ -1,38 +1,71 @@
-# Bitcoin and Machine Learning!
+# 📈 Bitcoin Price Prediction with Machine Learning
 
-With a recent rise in Crypto currency and Bitcoin stock reaching all new highs, the idea of developing a Python script to predict
-the closing price of the stock is very valuable. The Python library sklearn makes this prediction possible. 
+This project uses historical Bitcoin price data to predict future closing prices using machine learning. It includes data collection, model selection (Linear Regression vs Decision Tree Regressor), and a Flask-based web interface for user interaction.
 
-## Resources 
+## 🧠 Project Overview
 
-Here is where our data is stored. Various csv's were used from 1 month of data, 6 months of data and open to date data. Each csv
-was tested to see if the amount of data used would change the accuracy of our linear regression and decision tree regressor.
-From this I found the best accuracy was obtained using the most data. The idea of putting the data into a SQL database seemed to be a little over kill.
+- **Goal**: Predict future Bitcoin closing prices based on historical trends
+- **Approach**: Compare the performance of Linear Regression and Decision Tree Regressor models
+- **Interface**: Flask-powered app where users can input the number of future days to forecast
 
-## 1st and 2nd Model
+## 📁 Data & Resources
 
-Here is where the testing was performed on the linear regerssion and decision tree regressor to see which model could 
-consitently provide the best accuracy and which amount of data should be used as well. 
+Multiple CSV files were used containing:
+- 1-month, 6-month, and full historical data from Yahoo Finance  
+- The best prediction accuracy was achieved using the full dataset  
+- A custom Yahoo Finance scraper was built but later replaced with CSV downloads
 
-## prediction.py
+## ⚙️ Model Selection & Testing
 
-Once the best model was chosen, it was then converted from a jupyter notebook to a python script. The user is able to input how
-many days of predictions they want so the linear regression is defined in a funciton. The user input is passed to that function as
-a variable, future_days, then inputed in the script. The end result is then passed back to the app.py.
-![Prediction.py](Images/prediction.png)
+Initial testing compared:
+- **Linear Regression**
+- **Decision Tree Regressor**
 
-## app.py
+Each model was trained and tested on different durations of data. Linear Regression proved more consistent and accurate when trained on the full dataset.
 
-The Python Flask API is used to host the application. Two seperate web pages and the prediction.py are linked here. Seperate routes are made for each page and to return the output of the prediction.py. 
-![FlaskAPI](Images/flaskAPI.png) 
+## 🧪 `prediction.py`
 
-## Yahoo Finance Scrapper 
+The selected model was converted to a standalone script for reuse:
+- Accepts user input for `future_days`
+- Generates and returns forecasted price values
+- Output is passed to the Flask app
 
-A python script that was designed to scrape the yahoo finance website before I realized that yahoo finance allows you to download
-the stock information in csv format.
+📷 ![Prediction.py](Images/prediction.png)
 
-## Application Deployment 
-![HomePage](Images/HomePage.png)
-![TablePage](Images/TablePage.png)
-![Table1](Images/Table1.png)
-![Table2](Images/Table2.png)
+## 🌐 `app.py` – Flask Web App
+
+The Flask app creates a web interface for:
+- Home page with context and links
+- Results page showing tabulated forecasts and plots
+- Routes to integrate `prediction.py` output
+
+📷 ![FlaskAPI](Images/flaskAPI.png)
+
+## 🕸️ Web Deployment Preview
+
+Screenshots of the deployed app (hosted locally or via web server):
+
+📷 ![HomePage](Images/HomePage.png)  
+📷 ![TablePage](Images/TablePage.png)  
+📷 ![Table1](Images/Table1.png)  
+📷 ![Table2](Images/Table2.png)
+
+## 🔮 Future Improvements
+
+- Add moving averages and trading indicators (RSI, MACD)
+- Expand to multivariate forecasting (e.g., volume, other coins)
+- Explore LSTM or Prophet for time series predictions
+- Deploy using Docker + AWS (or Streamlit Cloud)
+
+## 🛠 Technologies Used
+
+- Python
+- Scikit-learn
+- Pandas
+- Matplotlib
+- Flask
+- Jupyter Notebook
+
+## 📄 License
+
+This project is open-source under the MIT License.
